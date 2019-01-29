@@ -48,6 +48,7 @@ const logoHeader = document.querySelector('header h1');
 function growFont() {
   logoHeader.style.fontSize = '60pt';
   logoHeader.style.color = 'green';
+  TweenMax.to(".headering", 1, {x:5000});
 }
 
 logoHeader.addEventListener('click', growFont);
