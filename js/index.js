@@ -52,8 +52,17 @@ image1.addEventListener('mouseover', enlarge);
 const logoHeader = document.querySelector('header h1');
 
 function growFont() {
-    logoHeader.style.fontSize = '60pt';
-    logoHeader.style.color = 'green';
-  }
+  logoHeader.style.fontSize = '60pt';
+  logoHeader.style.color = 'green';
+}
 
 logoHeader.addEventListener('click', growFont);
+
+// Add border on image scroll
+const image2 = document.querySelector('body');
+
+function addsBorder(event) {
+  image2.style.color = 'orange';
+}
+
+window.addEventListener('scroll', addsBorder);
