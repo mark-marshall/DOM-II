@@ -58,11 +58,20 @@ function growFont() {
 
 logoHeader.addEventListener('click', growFont);
 
-// Add border on image scroll
-const image2 = document.querySelector('body');
+// Change body text on scroll
+const bodyText = document.querySelector('body');
 
-function addsBorder(event) {
-  image2.style.color = 'orange';
+function changesBodyText(event) {
+  bodyText.style.color = 'orange';
 }
 
-window.addEventListener('scroll', addsBorder);
+window.addEventListener('scroll', changesBodyText);
+
+// Change body text on key-down and shift key-down
+const buttons = document.querySelectorAll('.btn');
+
+function colorRed() {
+  buttons.forEach(item => (item.style.backgroundColor = 'red'));
+}
+
+window.addEventListener('keydown', colorRed);
