@@ -1,16 +1,3 @@
-// Your code goes here
-/* 	* [ ] `mouseover`
- * [ ] `keydown`
- * [ ] `wheel`
- * [ ] `drag / drop`
- * [ ] `load`
- * [ ] `focus`
- * [ ] `resize`
- * [ ] `scroll`
- * [ ] `select`
- * [ ] `dblclick`
- */
-
 // Replicating randomise color nav from WEB16 Class video
 const heroImage = document.querySelector('header img');
 const navItems = document.querySelectorAll('nav a');
@@ -124,7 +111,7 @@ navItems[1].addEventListener('click', preventDefault);
 navItems[2].addEventListener('click', preventDefault);
 navItems[3].addEventListener('click', preventDefault);
 
-// Stop event propagation
+// Stop event propagation 
 const pydHeader = document.querySelector('.content-destination h2');
 //const bodyText = document.querySelector('body');
 
@@ -132,11 +119,11 @@ bodyText.addEventListener('click', turnBlue2);
 pydHeader.addEventListener('click', turnBlue);
 
 function turnBlue2() {
-  bodyText.style.backgroundColor = 'dodgerblue';
+  bodyText.style.backgroundColor = "dodgerblue";
 }
 
 function turnBlue(eventObj) {
-  pydHeader.style.backgroundColor = 'dodgerblue';
+  pydHeader.style.backgroundColor = "dodgerblue";
   eventObj.stopPropagation();
 }
 
