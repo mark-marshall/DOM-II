@@ -101,3 +101,15 @@ function toggleClassBorder() {
 }
 
 bottomImage.addEventListener('mouseover', toggleClassBorder);
+
+// Add opacity to AA image if shift and clicked on
+const aaImage = document.querySelector('.img-fluid');
+
+aaImage.addEventListener('click', opacity);
+
+function opacity(eventObj) {
+  const { shiftKey } = eventObj;
+  if (shiftKey === true) {
+    aaImage.style.opacity = '0.8';
+  }
+}
