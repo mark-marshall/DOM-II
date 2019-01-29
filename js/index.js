@@ -114,7 +114,7 @@ function opacity(eventObj) {
   }
 }
 
-//Stop navigation items from refreshing the page
+// Stop navigation items from refreshing the page
 function preventDefault(event) {
   event.preventDefault();
 }
@@ -123,3 +123,21 @@ navItems[0].addEventListener('click', preventDefault);
 navItems[1].addEventListener('click', preventDefault);
 navItems[2].addEventListener('click', preventDefault);
 navItems[3].addEventListener('click', preventDefault);
+
+// Stop event propagation
+const pydHeader = document.querySelector('.content-destination h2');
+//const bodyText = document.querySelector('body');
+
+bodyText.addEventListener('click', turnBlue2);
+pydHeader.addEventListener('click', turnBlue);
+
+function turnBlue2() {
+  bodyText.style.backgroundColor = 'dodgerblue';
+}
+
+function turnBlue(eventObj) {
+  pydHeader.style.backgroundColor = 'dodgerblue';
+  eventObj.stopPropagation();
+}
+
+// Only the button background changes on click of the button target
