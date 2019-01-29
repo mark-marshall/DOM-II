@@ -113,3 +113,13 @@ function opacity(eventObj) {
     aaImage.style.opacity = '0.8';
   }
 }
+
+//Stop navigation items from refreshing the page
+function preventDefault(event) {
+  event.preventDefault();
+}
+
+navItems[0].addEventListener('click', preventDefault);
+navItems[1].addEventListener('click', preventDefault);
+navItems[2].addEventListener('click', preventDefault);
+navItems[3].addEventListener('click', preventDefault);
