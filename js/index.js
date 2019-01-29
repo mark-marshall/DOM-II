@@ -92,3 +92,12 @@ function removeContent() {
 }
 
 fitsButton.addEventListener('click', removeContent);
+
+// Toggle red border on bottom image on mouseover
+const bottomImage = document.querySelector('.content-destination img');
+
+function toggleClassBorder() {
+  bottomImage.classList.toggle('red-border');
+}
+
+bottomImage.addEventListener('mouseover', toggleClassBorder);
