@@ -42,11 +42,18 @@ letsGo.addEventListener('dblclick', pageBottom);
 // Add image opacity on hover
 const image1 = document.querySelector('.img-one');
 
-function enlarge() {
+function addOpacity() {
   image1.style.opacity = '0.5';
 }
 
-image1.addEventListener('mouseover', enlarge);
+image1.addEventListener('mouseover', addOpacity);
+
+// Remove image opacity after hover
+function originalOpacity() {
+  image1.style.opacity = '1.0';
+}
+
+image1.addEventListener('mouseout', originalOpacity);
 
 // Tell user when page has loaded
 const logoHeader = document.querySelector('header h1');
