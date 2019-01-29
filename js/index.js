@@ -47,3 +47,13 @@ function enlarge() {
 }
 
 image1.addEventListener('mouseover', enlarge);
+
+// Tell user when page has loaded
+const logoHeader = document.querySelector('header h1');
+
+function growFont() {
+    logoHeader.style.fontSize = '60pt';
+    logoHeader.style.color = 'green';
+  }
+
+logoHeader.addEventListener('click', growFont);
