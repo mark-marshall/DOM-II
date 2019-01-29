@@ -68,7 +68,7 @@ logoHeader.addEventListener('click', growFont);
 // Change body text on scroll
 const bodyText = document.querySelector('body');
 
-function changesBodyText(event) {
+function changesBodyText() {
   bodyText.style.color = 'orange';
 }
 
@@ -82,3 +82,13 @@ function colorRed() {
 }
 
 window.addEventListener('keydown', colorRed);
+
+// Take away other destination divs when click on FITS
+const fitsButton = document.querySelector('.fits');
+const dest = document.querySelectorAll('.d2');
+
+function removeContent() {
+  dest.forEach(item => item.classList.toggle('display-none'));
+}
+
+fitsButton.addEventListener('click', removeContent);
